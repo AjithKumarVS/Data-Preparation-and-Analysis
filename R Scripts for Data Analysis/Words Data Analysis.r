@@ -12,13 +12,10 @@ charCombos<-function(str,z){
   for(i in 1:(length(old))){
     cc<-0
     for(j in (i):(length(old))){
-      if((is.null(unlist(new[i])))||(is.null(unlist(old[j])))){
-        break
-      }
       if(unlist(new[i]) == unlist(old[j])){
         cc<-cc+1
         if(i!=j){
-          old[j] <- NULL
+          old[j] <- "0"
         }
       }
     }
